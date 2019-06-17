@@ -1,0 +1,101 @@
+pipeline{
+	agent{
+		node{
+			label 'TEST_SLAVE'
+		}
+	}
+    options {
+        disableConcurrentBuilds()
+        skipStagesAfterUnstable()
+    }
+	stages{
+		stage('set build'){
+			steps{
+				script{
+					sh 'rm -rf ./test_proj/Build/iOS/'
+					sh 'rm -rf ./test_proj/Assets/StreamingAssets/'
+				}
+			}
+		}
+		stage('get message'){
+			steps{
+				script{
+					commit_message = ''
+					def changeLogSets = currentBuild.changeSets
+
+					for (int i = changeLogSets.size() - 1; i < changeLogSets.size() && i >= 0; i++) {
+						def entries = changeLogSets[i].items
+						for( int j = 0; j < entries.length; j++) {
+							def entry = entries[j];
+                                if ("${entry.msg}".contains("[Jenkinsfile]"))
+                                    continue
+
+                                commit_message += "- ${entry.msg} [${entry.author}]\n"
+						}
+					}
+				}
+				echo commit_message
+			}
+		}
+		stage('unity build'){
+			steps{
+				script{
+					try {
+						sh '/Applications/Unity/Unity.app/Contents/MacOS/Unity -quit -batchMode \
+						-projectPath /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project -executeMethod Unity3dBuilder.PerformIOSBuild'
+					}
+                    catch(Exception ex){
+                        error("unity build fail")
+                    }
+                }
+			}
+		}
+		stage('Xcode'){
+			steps{
+				script{
+					WORKSPACE = "/Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project"
+					arguments = '"PROVISIONING_PROFILE_SPECIFIER=candyTest2" "CODE_SIGN_IDENTITY=iPhone Developer" "PROVISIONING_PROFILE=afe79f64-2ec4-4788-93a9-e044d7a70b13" "DEVELOPMENT_TEAM=9EN6WKMF8R"'
+					
+                    xcodeBuild appURL: '',
+                    assetPackManifestURL: '',
+                    buildDir: "${WORKSPACE}/Build/xcode_test",
+                    buildIpa: false, bundleID: '',
+                    bundleIDInfoPlistPath: '',
+                    cfBundleShortVersionStringValue: '',
+                    cfBundleVersionValue: '',
+                    configuration: "Debug",
+                    developmentTeamID: '9EN6WKMF8R',
+                    developmentTeamName: 'Ace Project Inc.',
+                    displayImageURL: '',
+                    fullSizeImageURL: '',
+                    generateArchive: true,
+                    ipaExportMethod: '',
+                    ipaName: '',
+                    ipaOutputDirectory: '',
+                    keychainName: "candy",
+                    keychainPath: '',
+                    keychainPwd: '',
+                    logfileOutputDirectory: '',
+                    provisioningProfiles: [[provisioningProfileAppId: 'CANDYCRUSH', provisioningProfileUUID: 'afe79f64-2ec4-4788-93a9-e044d7a70b13']],
+                    sdk: '', symRoot: '',
+                    target: '',
+                    thinning: '',
+                    unlockKeychain: true,
+                    xcodeProjectFile: '',
+                    xcodeProjectPath: "${WORKSPACE}/Build/iOS/Xcode/CANDY_CRUSH",
+                    xcodeSchema: "Unity-iPhone",
+                    xcodeWorkspaceFile: '',
+                    xcodebuildArguments: "${arguments}"
+				}
+			}
+		}
+	}
+	post{
+		failure{
+			echo 'build fail'
+		}
+		success{
+			echo 'build success'
+		}
+	}
+}

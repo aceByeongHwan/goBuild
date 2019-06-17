@@ -1,0 +1,40 @@
+pipeline{
+	agent{
+		node{
+			label 'TEST_SLAVE'
+		}
+	}
+	stages{
+		stage('set build'){
+			steps{
+				script{
+					sh 'rm -rf ./test_proj/Build/'
+					sh 'mkdir -p ./test_proj/Build'
+				}
+			}
+		}
+		stage('unity build'){
+			steps{
+				script{
+					try {
+						sh '/Applications/Unity/Unity.app/Contents/MacOS/Unity -quit -batchMode \
+						-projectPath /Users/ace-unknown/Desktop/build_test2/test_proj/ -executeMethod Unity3dBuilder.PerformMacBuildDEV'
+					}
+                    catch(Exception ex){
+                        error("unity build fail")
+                    }
+                }
+			}
+		}
+	}
+	post{
+		failure{
+			//sh 'rm -r /Users/ace-unknown/Desktop/build_test/test_proj/Library/ScriptAssemblies'
+			echo 'build fail'
+		}
+		success{
+			//sh 'rm -r /Users/ace-unknown/Desktop/build_test/test_proj/Library/ScriptAssemblies'
+			echo 'build success'
+		}
+	}
+}

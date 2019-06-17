@@ -1,0 +1,143 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:2:1-22:12
+	package
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:2:70-106
+		INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml
+		INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:2:1-22:12
+		INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:2:107-153
+	android:versionCode
+		INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:2:1-22:12
+		INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:2:11-69
+	android:installLocation
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:2:154-194
+supports-screens
+ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:3:3-163
+	android:largeScreens
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:3:78-105
+	android:smallScreens
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:3:21-48
+	android:normalScreens
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:3:49-77
+	android:xlargeScreens
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:3:106-134
+	android:anyDensity
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:3:135-160
+application
+ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:4:3-16:17
+	android:label
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:4:90-122
+	android:icon
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:4:58-89
+	android:banner
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:4:145-182
+	android:theme
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:4:16-57
+	android:isGame
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:4:123-144
+activity#com.test.candycrushAndroid.UnityPlayerActivity
+ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:5:5-12:16
+	android:screenOrientation
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:5:48-91
+	android:label
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:5:15-47
+	android:launchMode
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:5:92-123
+	android:hardwareAccelerated
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:5:306-341
+	android:configChanges
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:5:124-305
+	android:name
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:5:342-403
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER+android.intent.category.LEANBACK_LAUNCHER
+ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:6:7-10:23
+action#android.intent.action.MAIN
+ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:7:9-61
+	android:name
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:7:17-58
+category#android.intent.category.LAUNCHER
+ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:8:9-69
+	android:name
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:8:19-66
+category#android.intent.category.LEANBACK_LAUNCHER
+ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:9:9-78
+	android:name
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:9:19-75
+meta-data#unityplayer.UnityActivity
+ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:11:7-82
+	android:value
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:11:59-79
+	android:name
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:11:18-58
+meta-data#unity.build-id
+ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:13:5-101
+	android:value
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:13:46-98
+	android:name
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:13:16-45
+meta-data#unity.splash-mode
+ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:14:5-69
+	android:value
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:14:49-66
+	android:name
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:14:16-48
+meta-data#unity.splash-enable
+ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:15:5-74
+	android:value
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:15:51-71
+	android:name
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:15:16-50
+uses-feature#0x00020000
+ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:17:3-52
+	android:glEsVersion
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:17:17-49
+uses-permission#android.permission.INTERNET
+ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:18:3-65
+	android:name
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:18:20-62
+uses-feature#android.hardware.touchscreen
+ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:19:3-88
+	android:required
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:19:61-85
+	android:name
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:19:17-60
+uses-feature#android.hardware.touchscreen.multitouch
+ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:20:3-99
+	android:required
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:20:72-96
+	android:name
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:20:17-71
+uses-feature#android.hardware.touchscreen.multitouch.distinct
+ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:21:3-108
+	android:required
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:21:81-105
+	android:name
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml:21:17-80
+uses-sdk
+INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml
+INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml
+INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml
+INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml
+		INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml
+		ADDED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml
+		INJECTED from /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml

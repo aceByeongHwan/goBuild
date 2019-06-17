@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{52943537-5E5B-EB62-90C3-21282996A80B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Editor/Unity3dBuilder.cs">
+    <Files>
+      <File FileName="Assets/Editor/Unity3dBuilder.cs" Line="32" Column="7" />
+      <File FileName="Assets/study/proj2/scripts/manager.cs" Line="259" Column="19" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,39 @@
+pipeline{
+    agent{
+        node{
+            label "BASEBALL_CRUSH_SLAVE"
+        }
+    }
+    stages{
+        stage('git clone'){
+            steps{
+                script{
+                
+                }
+            }
+        }
+    	stage('Upload json to server'){
+            steps{
+                script{
+                	sh "python3 ~/Desktop/ss.py ${PATH}"
+                	withAWS(region:'ap-northeast-1', credentials:'CPBL'){
+                		s3Upload(
+                			bucket:"${BUCKET}",
+                			path:"${PATH}",
+                			file:"string_data.json",
+                			sseAlgorithm:'AES256'
+                		)
+                	}
+                }         
+            }
+        }
+    }
+    post{
+        failure{
+        	echo 'build fail'
+        }
+        success{
+        	echo 'build seccess'
+        }
+    }
+}

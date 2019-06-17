@@ -1,0 +1,73 @@
+pipeline{
+	agent{
+		node{
+			label 'TEST_SLAVE'
+		}
+	}
+    options {
+        disableConcurrentBuilds()
+        skipStagesAfterUnstable()
+    }
+	stages{
+		stage('set build'){
+			steps{
+				script{
+					sh 'rm -rf ./test_proj/Build/android/'
+					sh 'rm -rf ./test_proj/Assets/StreamingAssets/'
+				}
+			}
+		}
+		stage('get message'){
+			steps{
+				script{
+					commit_message = ''
+					def changeLogSets = currentBuild.changeSets
+
+					for (int i = changeLogSets.size() - 1; i < changeLogSets.size() && i >= 0; i++) {
+						def entries = changeLogSets[i].items
+						for( int j = 0; j < entries.length; j++) {
+							def entry = entries[j];
+                                if ("${entry.msg}".contains("[Jenkinsfile]"))
+                                    continue
+
+                                commit_message += "- ${entry.msg} [${entry.author}]\n"
+						}
+					}
+				}
+				echo commit_message
+			}
+		}
+		stage('unity build'){
+			steps{
+				script{
+					try {
+						sh '/Applications/Unity/Unity.app/Contents/MacOS/Unity -quit -batchMode \
+						-projectPath /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project -executeMethod Unity3dBuilder.PerformAndroidBuild'
+					}
+                    catch(Exception ex){
+                        error("unity build fail")
+                    }
+                }
+			}
+		}
+		stage('gradle script'){
+			steps{
+				script{
+					sh """
+                        cd /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH
+                        gradle clean
+                        gradle build
+                    """
+				}
+			}
+		}
+	}
+	post{
+		failure{
+			echo 'build fail'
+		}
+		success{
+			echo 'build success'
+		}
+	}
+}

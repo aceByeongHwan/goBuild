@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 3.0.1">
+
+    <issue
+        id="MissingLeanbackSupport"
+        severity="Error"
+        message="Expecting &lt;uses-feature android:name=&quot;android.software.leanback&quot; android:required=&quot;false&quot; /> tag."
+        category="Correctness"
+        priority="6"
+        summary="Missing Leanback Support."
+        explanation="The manifest should declare the use of the Leanback user interface required by Android TV.&#xA;To fix this, add&#xA;`&lt;uses-feature android:name=&quot;android.software.leanback&quot;   android:required=&quot;false&quot; />`&#xA;to your manifest."
+        url="https://developer.android.com/training/tv/start/start.html#leanback-req"
+        urls="https://developer.android.com/training/tv/start/start.html#leanback-req"
+        errorLine1="&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; package=&quot;com.test.candycrushAndroid&quot; xmlns:tools=&quot;http://schemas.android.com/tools&quot; android:installLocation=&quot;preferExternal&quot;>"
+        errorLine2="^"
+        quickfix="studio">
+        <location
+            file="/Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility &#xA;modes apply. Consider testing and updating this version. &#xA;Consult the android.os.Build.VERSION_CODES javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Target SDK attribute is not targeting latest version"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.&#xA;&#xA;To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        url="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        urls="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1="        targetSdkVersion 27"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/build.gradle"
+            line="34"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        severity="Warning"
+        message="Attribute `banner` is only used in API level 21 and higher (current min is 16)"
+        category="Correctness"
+        priority="6"
+        summary="Attribute unused on older versions"
+        explanation="This check finds attributes set in XML files that were introduced in a version newer than the oldest version targeted by your application (with the `minSdkVersion` attribute).&#xA;&#xA;This is not an error; the application will simply ignore the attribute. However, if the attribute is important to the appearance or functionality of your application, you should consider finding an alternative way to achieve the same result with only available attributes, and then you can optionally create a copy of the layout in a layout-vNN folder which will be used on API NN or higher where you can take advantage of the newer attribute.&#xA;&#xA;Note: This check does not only apply to attributes. For example, some tags can be unused too, such as the new `&lt;tag>` element in layouts introduced in API 21."
+        errorLine1="  &lt;application android:theme=&quot;@style/UnityThemeSelector&quot; android:icon=&quot;@mipmap/app_icon&quot; android:label=&quot;@string/app_name&quot; android:isGame=&quot;true&quot; android:banner=&quot;@drawable/app_banner&quot;>"
+        errorLine2="                                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml"
+            line="4"
+            column="145"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        severity="Warning"
+        message="Attribute `isGame` is only used in API level 21 and higher (current min is 16)"
+        category="Correctness"
+        priority="6"
+        summary="Attribute unused on older versions"
+        explanation="This check finds attributes set in XML files that were introduced in a version newer than the oldest version targeted by your application (with the `minSdkVersion` attribute).&#xA;&#xA;This is not an error; the application will simply ignore the attribute. However, if the attribute is important to the appearance or functionality of your application, you should consider finding an alternative way to achieve the same result with only available attributes, and then you can optionally create a copy of the layout in a layout-vNN folder which will be used on API NN or higher where you can take advantage of the newer attribute.&#xA;&#xA;Note: This check does not only apply to attributes. For example, some tags can be unused too, such as the new `&lt;tag>` element in layouts introduced in API 21."
+        errorLine1="  &lt;application android:theme=&quot;@style/UnityThemeSelector&quot; android:icon=&quot;@mipmap/app_icon&quot; android:label=&quot;@string/app_name&quot; android:isGame=&quot;true&quot; android:banner=&quot;@drawable/app_banner&quot;>"
+        errorLine2="                                                                                                                          ~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml"
+            line="4"
+            column="123"/>
+    </issue>
+
+    <issue
+        id="ManifestOrder"
+        severity="Warning"
+        message="`&lt;uses-feature>` tag appears after `&lt;application>` tag"
+        category="Correctness"
+        priority="5"
+        summary="Incorrect order of elements in manifest"
+        explanation="The &lt;application> tag should appear after the elements which declare which version you need, which features you need, which libraries you need, and so on. In the past there have been subtle bugs (such as themes not getting applied correctly) when the `&lt;application>` tag appears before some of these other elements, so it&apos;s best to order your manifest in the logical dependency order."
+        errorLine1="  &lt;uses-feature android:glEsVersion=&quot;0x00020000&quot; />"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml"
+            line="17"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.tools.build:gradle than 3.0.1 is available: 3.4.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="        classpath &apos;com.android.tools.build:gradle:3.0.1&apos;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/build.gradle"
+            line="10"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="AllowBackup"
+        severity="Warning"
+        message="On SDK version 23 and up, your app data will be automatically backed up and restored on app install. Consider adding the attribute `android:fullBackupContent` to specify an `@xml` resource which configures which files to backup. More info: https://developer.android.com/training/backup/autosyncapi.html"
+        category="Security"
+        priority="3"
+        summary="AllowBackup/FullBackupContent Problems"
+        explanation="The `allowBackup` attribute determines if an application&apos;s data can be backed up and restored. It is documented at http://developer.android.com/reference/android/R.attr.html#allowBackup&#xA;&#xA;By default, this flag is set to `true`. When this flag is set to `true`, application data can be backed up and restored by the user using `adb backup` and `adb restore`.&#xA;&#xA;This may have security consequences for an application. `adb backup` allows users who have enabled USB debugging to copy application data off of the device. Once backed up, all application data can be read by the user. `adb restore` allows creation of application data from a source specified by the user. Following a restore, applications should not assume that the data, file permissions, and directory permissions were created by the application itself.&#xA;&#xA;Setting `allowBackup=&quot;false&quot;` opts an application out of both backup and restore.&#xA;&#xA;To fix this warning, decide whether your application should support backup, and explicitly set `android:allowBackup=(true|false)&quot;`.&#xA;&#xA;If not set to false, and if targeting API 23 or later, lint will also warn that you should set `android:fullBackupContent` to configure auto backup."
+        url="https://developer.android.com/training/backup/autosyncapi.html"
+        urls="https://developer.android.com/training/backup/autosyncapi.html,http://developer.android.com/reference/android/R.attr.html#allowBackup"
+        errorLine1="  &lt;application android:theme=&quot;@style/UnityThemeSelector&quot; android:icon=&quot;@mipmap/app_icon&quot; android:label=&quot;@string/app_name&quot; android:isGame=&quot;true&quot; android:banner=&quot;@drawable/app_banner&quot;>"
+        errorLine2="  ^"
+        quickfix="studio">
+        <location
+            file="/Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml"
+            line="4"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="AllowBackup"
+        severity="Warning"
+        message="Should explicitly set `android:allowBackup` to `true` or `false` (it&apos;s `true` by default, and that can have some security implications for the application&apos;s data)"
+        category="Security"
+        priority="3"
+        summary="AllowBackup/FullBackupContent Problems"
+        explanation="The `allowBackup` attribute determines if an application&apos;s data can be backed up and restored. It is documented at http://developer.android.com/reference/android/R.attr.html#allowBackup&#xA;&#xA;By default, this flag is set to `true`. When this flag is set to `true`, application data can be backed up and restored by the user using `adb backup` and `adb restore`.&#xA;&#xA;This may have security consequences for an application. `adb backup` allows users who have enabled USB debugging to copy application data off of the device. Once backed up, all application data can be read by the user. `adb restore` allows creation of application data from a source specified by the user. Following a restore, applications should not assume that the data, file permissions, and directory permissions were created by the application itself.&#xA;&#xA;Setting `allowBackup=&quot;false&quot;` opts an application out of both backup and restore.&#xA;&#xA;To fix this warning, decide whether your application should support backup, and explicitly set `android:allowBackup=(true|false)&quot;`.&#xA;&#xA;If not set to false, and if targeting API 23 or later, lint will also warn that you should set `android:fullBackupContent` to configure auto backup."
+        url="https://developer.android.com/training/backup/autosyncapi.html"
+        urls="https://developer.android.com/training/backup/autosyncapi.html,http://developer.android.com/reference/android/R.attr.html#allowBackup"
+        errorLine1="  &lt;application android:theme=&quot;@style/UnityThemeSelector&quot; android:icon=&quot;@mipmap/app_icon&quot; android:label=&quot;@string/app_name&quot; android:isGame=&quot;true&quot; android:banner=&quot;@drawable/app_banner&quot;>"
+        errorLine2="  ^"
+        quickfix="studio">
+        <location
+            file="/Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml"
+            line="4"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.mipmap.app_icon_round` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;adaptive-icon xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^"
+        quickfix="studio">
+        <location
+            file="/Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/res/mipmap-anydpi-v26/app_icon_round.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.style.UnityThemeSelector_Translucent` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;style name=&quot;UnityThemeSelector.Translucent&quot; parent=&quot;@style/UnityThemeSelector&quot;>"
+        errorLine2="       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/res/values/styles.xml"
+            line="8"
+            column="8"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        severity="Warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details"
+        category="Usability:Icons"
+        priority="6"
+        summary="The launcher icon shape should use a distinct silhouette"
+        explanation="According to the Android Design Guide (http://developer.android.com/design/style/iconography.html) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square."
+        url="http://developer.android.com/design/style/iconography.html"
+        urls="http://developer.android.com/design/style/iconography.html">
+        <location
+            file="/Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/res/mipmap-mdpi/app_icon.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        severity="Warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details"
+        category="Usability:Icons"
+        priority="6"
+        summary="The launcher icon shape should use a distinct silhouette"
+        explanation="According to the Android Design Guide (http://developer.android.com/design/style/iconography.html) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square."
+        url="http://developer.android.com/design/style/iconography.html"
+        urls="http://developer.android.com/design/style/iconography.html">
+        <location
+            file="/Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/res/mipmap-mdpi/ic_launcher_background.png"/>
+    </issue>
+
+    <issue
+        id="IconMissingDensityFolder"
+        severity="Warning"
+        message="Missing density variation folders in `src/main/res`: drawable-hdpi, drawable-mdpi, drawable-xxhdpi"
+        category="Usability:Icons"
+        priority="3"
+        summary="Missing density folder"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra-high, extra-extra-high). This lint check identifies folders which are missing, such as `drawable-hdpi`.&#xA;&#xA;Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="/Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/res"/>
+    </issue>
+
+    <issue
+        id="GoogleAppIndexingWarning"
+        severity="Warning"
+        message="App is not indexable by Google Search; consider adding at least one Activity with an ACTION-VIEW intent filter. See issue explanation for more details."
+        category="Usability"
+        priority="5"
+        summary="Missing support for Firebase App Indexing"
+        explanation="Adds URLs to get your app into the Google index, to get installs and traffic to your app from Google Search."
+        url="https://g.co/AppIndexing/AndroidStudio"
+        urls="https://g.co/AppIndexing/AndroidStudio"
+        errorLine1="  &lt;application android:theme=&quot;@style/UnityThemeSelector&quot; android:icon=&quot;@mipmap/app_icon&quot; android:label=&quot;@string/app_name&quot; android:isGame=&quot;true&quot; android:banner=&quot;@drawable/app_banner&quot;>"
+        errorLine2="  ^"
+        quickfix="studio">
+        <location
+            file="/Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/src/main/AndroidManifest.xml"
+            line="4"
+            column="3"/>
+    </issue>
+
+</issues>

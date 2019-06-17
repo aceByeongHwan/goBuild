@@ -1,0 +1,4 @@
+#Wed Jun 12 17:46:35 KST 2019
+base.0=/Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH/build/intermediates/transforms/dex/release/0
+path.0=classes.dex
+renamed.0=classes.dex
