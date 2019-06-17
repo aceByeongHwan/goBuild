@@ -42,7 +42,7 @@ pipeline{
 				script{
 					try {
 						sh '/Applications/Unity/Unity.app/Contents/MacOS/Unity -quit -batchMode \
-						-projectPath /Users/ace-unknown/Desktop/build_job/jenkinsBuild/goBuild/test_project -executeMethod Unity3dBuilder.PerformAndroidBuild'
+						-projectPath /Users/ace-unknown/work/Jenkins/goBuild/test_project -executeMethod Unity3dBuilder.PerformAndroidBuild'
 					}
                     catch(Exception ex){
                         error("unity build fail")
@@ -54,7 +54,7 @@ pipeline{
 			steps{
 				script{
 					sh """
-                        cd /Users/ace-unknown/Desktop/build_job/jenkinsBuild/goBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH
+                        cd /Users/ace-unknown/work/Jenkins/goBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH
                         gradle clean
                         gradle build
                     """

@@ -42,7 +42,7 @@ pipeline{
 				script{
 					try {
 						sh '/Applications/Unity/Unity.app/Contents/MacOS/Unity -quit -batchMode \
-						-projectPath /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project -executeMethod Unity3dBuilder.PerformMacBuild'
+						-projectPath /Users/ace-unknown/work/Jenkins/goBuild/test_project -executeMethod Unity3dBuilder.PerformMacBuild'
 					}
                     catch(Exception ex){
                         error("unity build fail")
