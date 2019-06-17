@@ -42,7 +42,7 @@ pipeline{
 				script{
 					try {
 						sh '/Applications/Unity/Unity.app/Contents/MacOS/Unity -quit -batchMode \
-						-projectPath /Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project -executeMethod Unity3dBuilder.PerformIOSBuild'
+						-projectPath /Users/ace-unknown/Desktop/build_job/jenkinsBuild/goBuild/test_project -executeMethod Unity3dBuilder.PerformIOSBuild'
 					}
                     catch(Exception ex){
                         error("unity build fail")
@@ -53,7 +53,7 @@ pipeline{
 		stage('Xcode'){
 			steps{
 				script{
-					WORKSPACE = "/Users/ace-unknown/Desktop/build_job/jenkinsBuild/tryBuild/test_project"
+					WORKSPACE = "/Users/ace-unknown/Desktop/build_job/jenkinsBuild/goBuild/test_project"
 					arguments = '"PROVISIONING_PROFILE_SPECIFIER=candyTest2" "CODE_SIGN_IDENTITY=iPhone Developer" "PROVISIONING_PROFILE=afe79f64-2ec4-4788-93a9-e044d7a70b13" "DEVELOPMENT_TEAM=9EN6WKMF8R"'
 					
                     xcodeBuild appURL: '',
