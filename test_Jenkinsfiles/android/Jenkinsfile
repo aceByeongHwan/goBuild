@@ -11,6 +11,7 @@ pipeline{
 	stages{
 		stage('set build'){
 			steps{
+				echo "stage : set build"
 				script{
 					sh 'rm -rf ./test_proj/Build/android/'
 					sh 'rm -rf ./test_proj/Assets/StreamingAssets/'
@@ -19,6 +20,7 @@ pipeline{
 		}
 		stage('get message'){
 			steps{
+				echo "stage : get message"
 				script{
 					commit_message = ''
 					def changeLogSets = currentBuild.changeSets
@@ -39,6 +41,7 @@ pipeline{
 		}
 		stage('unity build'){
 			steps{
+				echo "stage : unity build"
 				script{
 					try {
 						sh '/Applications/Unity/Unity.app/Contents/MacOS/Unity -quit -batchMode \
@@ -52,6 +55,7 @@ pipeline{
 		}
 		stage('gradle script'){
 			steps{
+				echo "stage : gradle script"
 				script{
 					sh """
                         cd /Users/ace-unknown/work/Jenkins/goBuild/test_project/Build/android/CANDY_CRUSH/CANDY_CRUSH
