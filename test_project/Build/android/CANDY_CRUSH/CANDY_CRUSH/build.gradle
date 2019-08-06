@@ -2,17 +2,21 @@
 
 buildscript {
     repositories {
+        mavenCentral()
         google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
-    }
+        classpath 'com.android.tools.build:gradle:3.4.0'
+}
 }
 
 allprojects {
     repositories {
+        mavenCentral()
+        google()
+        jcenter()
         flatDir {
             dirs 'libs'
         }
@@ -21,6 +25,7 @@ allprojects {
 
 apply plugin: 'com.android.application'
 
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
@@ -28,6 +33,11 @@ dependencies {
 android {
     compileSdkVersion 27
     buildToolsVersion '28.0.3'
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
     defaultConfig {
         minSdkVersion 16
@@ -45,7 +55,7 @@ android {
     }
 
     aaptOptions {
-        noCompress '.unity3d', '.ress', '.resource', '.obb'
+        noCompress = ['.unity3d', '.ress', '.resource', '.obb']
     }
 
     buildTypes {
@@ -68,4 +78,15 @@ android {
         doNotStrip '*/x86/*.so'
     }
 
+    bundle {
+        language {
+            enableSplit = false
+        }
+        density {
+            enableSplit = false
+        }
+        abi {
+            enableSplit = true
+        }
+    }
 }
